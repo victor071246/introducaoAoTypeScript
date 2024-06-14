@@ -3,8 +3,9 @@ alert("Testando compilação do TS");
 const elementoSaldo = document.querySelector(".saldo-valor .valor");
 const elementoDataAcesso = document.querySelector(".block-saldo time");
 if (elementoSaldo != null) {
-    elementoSaldo.textContent = saldo.toLocaleString("pt-br", { currency: "BRL", style: "currency" });
+    elementoSaldo.textContent = formatarMoeda(saldo);
 }
 if (elementoDataAcesso != null) {
-    elementoDataAcesso.textContent;
+    const dataAcesso = new Date();
+    elementoDataAcesso.textContent = formatarData(dataAcesso);
 }
